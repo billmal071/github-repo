@@ -15,7 +15,7 @@ const url = "https://api.github.com/graphql";
 const query = `
 
 {
-    user(login: "billmal071") {
+    user(login: "will") {
       id
       repositories(orderBy: {field: CREATED_AT, direction: DESC}, first: 20) {
         edges {
@@ -48,7 +48,7 @@ const opt = {
     method: "POST",
     headers: {
         "Content-Type": "application/json",
-        "Authorization": "Bearer 2a2cd5faadbc79975c08cd72d176802ddad5d31b"
+        "Authorization": "Bearer token"
     },
     body: JSON.stringify({
         query
@@ -224,3 +224,25 @@ function month(number) {
 document.querySelector('#menu-opener').addEventListener('click', () => {
     document.querySelector('.header-item--full').classList.toggle('show')
 })
+
+function myFunction() {
+  document.getElementById("myDropdown").classList.toggle("show-content");
+}
+
+function myFunction1() {
+  document.getElementById("myDropdown1").classList.toggle("show-content");
+}
+
+// Close the dropdown if the user clicks outside of it
+window.onclick = function(event) {
+  if (!event.target.matches('.dropbtn')) {
+    var dropdowns = document.getElementsByClassName("dropdown-content");
+    var i;
+    for (i = 0; i < dropdowns.length; i++) {
+      var openDropdown = dropdowns[i];
+      if (openDropdown.classList.contains('show-content')) {
+        openDropdown.classList.remove('show-content');
+      }
+    }
+  }
+}

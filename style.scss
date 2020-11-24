@@ -150,6 +150,10 @@ $color-text-inverse: #fff;
   padding: 0 !important;
 }
 
+.p-1 {
+  padding: 5px !important;
+}
+
 .p-2 {
   padding: 8px !important;
 }
@@ -172,6 +176,10 @@ $color-text-inverse: #fff;
 
 .pb-8 {
   padding-bottom: 8px !important;
+}
+
+.pt-8 {
+  padding-top: 8px !important;
 }
 
 .px-3 {
@@ -364,7 +372,7 @@ $color-text-inverse: #fff;
   appearance: none;
 
   &:hover {
-      background-color: whitesmoke;
+    background-color: whitesmoke;
   }
 }
 
@@ -489,6 +497,10 @@ h4 {
 
 .show {
   display: none !important;
+}
+
+.show-content {
+  display: block !important;
 }
 
 .search {
@@ -710,12 +722,50 @@ h4 {
 }
 
 .hover-link:hover {
-    text-decoration: underline !important;
+  text-decoration: underline !important;
 }
 
 .octicon {
   vertical-align: text-bottom;
   display: inline-block;
+}
+
+/* dropdown */
+.dropbtn {
+  cursor: pointer;
+}
+
+.dropdown {
+  position: relative;
+  display: inline-block;
+}
+
+.dropdown-content {
+  display: none;
+  position: absolute;
+  background-color: $bg-white;
+  width: 160px;
+  top: 100%;
+  padding-top: 4px;
+  padding-bottom: 4px;
+  margin-top: 2px;
+  overflow: auto;
+  box-shadow: 0px 8px 16px 0px rgba(0, 0, 0, 0.2);
+  z-index: 5;
+  right: 0;
+  left: auto;
+  border-radius: 6px;
+}
+
+.dropdown-content a {
+  color: black;
+  padding: 4px 8px 4px 16px;
+  text-decoration: none;
+  display: block;
+}
+
+.dropdown a:hover {
+  background-color: $color-text-link;
 }
 
 * {
@@ -739,8 +789,9 @@ details {
   display: block;
 }
 
-b, strong {
-    font-weight: 600;
+b,
+strong {
+  font-weight: 600;
 }
 
 .details-reset > summary {
